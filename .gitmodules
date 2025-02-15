@@ -1,0 +1,4 @@
+[submodule "libmdbx"]
+	path = libmdbx
+	url = https://gitflic.ru/project/erthink/libmdbx.git
+	branch = master
