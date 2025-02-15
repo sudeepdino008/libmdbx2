@@ -4,6 +4,9 @@
 all:
 	cmake -S . -B build && cmake --build build
 
+cmake:
+	cmake -S . -B build
+
 build:
 	cmake --build build
 
