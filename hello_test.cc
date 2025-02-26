@@ -16,4 +16,11 @@ TEST(EnvTests, OpenEnv) {
   int rc = mdbx_env_create(&env);
   ASSERT_EQ(rc, 0);
   ASSERT_NE(env, nullptr);
+
+  //int status = mdbx_env_open(rc, "./testdata", 0, );
+  int status = mdbx_env_open(env, "./testdata", MDBX_SYNC_DURABLE | MDBX_WRITEMAP, 0777);
+  ASSERT_EQ(status, 0);
+
+  status = mdbx_env_open(env, "./testdata", MDBX_SYNC_DURABLE | MDBX_WRITEMAP, 0777);
+  ASSERT_EQ(status, 0);
 }
